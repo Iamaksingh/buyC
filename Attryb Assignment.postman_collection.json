@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "60e85ffd-f37e-47e1-8bcf-f232fc816dc8",
+		"name": "Attryb Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "47011916"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aditya\",\r\n    \"email\":\"iamaksingh2004@gmail.com\",\r\n    \"password\":\"Ad@070304\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"iamaksingh2004@gmail.com\",\r\n    \"password\":\"Ad@070304\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "OEM Specs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}/oem/count"
+			},
+			"response": []
+		},
+		{
+			"name": "Honda City 2015",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/oem/search?manufacturer=Honda&modelName=City&year=2015",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"oem",
+						"search"
+					],
+					"query": [
+						{
+							"key": "manufacturer",
+							"value": "Honda"
+						},
+						{
+							"key": "modelName",
+							"value": "City"
+						},
+						{
+							"key": "year",
+							"value": "2015"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "car inventory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDYxMTU0NjJmNmJmMTIwOTRjNDIxYiIsImlhdCI6MTc1ODg1OTk5OSwiZXhwIjoxNzU4ODYzNTk5fQ.N87QTfUYnbIu0p7YFTSgh67c1j9FrN5h_Ojm-pxS_lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"BMW 320d 2016 - Black\",\r\n  \"price\": 1800000,\r\n  \"color\": \"Black\",\r\n  \"kmsOnOdometer\": 60000,\r\n  \"majorScratches\": false,\r\n  \"originalPaint\": true,\r\n  \"accidentsReported\": 0,\r\n  \"previousOwners\": 1,\r\n  \"registrationPlace\": \"Bangalore\",\r\n  \"bulletPoints\": [\r\n    \"Kms Driven: 60000\",\r\n    \"Original Paint\",\r\n    \"No Accidents\",\r\n    \"Previous Owner: 1\",\r\n    \"Registered in Bangalore\"\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "car inventory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDYxMTU0NjJmNmJmMTIwOTRjNDIxYiIsImlhdCI6MTc1ODg1OTk5OSwiZXhwIjoxNzU4ODYzNTk5fQ.N87QTfUYnbIu0p7YFTSgh67c1j9FrN5h_Ojm-pxS_lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/inventory",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "White",
+							"disabled": true
+						},
+						{
+							"key": "minPrice",
+							"value": "200000",
+							"disabled": true
+						},
+						{
+							"key": "maxPrice",
+							"value": "800000",
+							"disabled": true
+						},
+						{
+							"key": "mileage",
+							"value": "18",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit car details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDYxMTU0NjJmNmJmMTIwOTRjNDIxYiIsImlhdCI6MTc1ODg1OTk5OSwiZXhwIjoxNzU4ODYzNTk5fQ.N87QTfUYnbIu0p7YFTSgh67c1j9FrN5h_Ojm-pxS_lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"kmsDriven\": 46000,\r\n  \"price\": 590000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/inventory/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"inventory",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "68d613cd37a318e82afe91e9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDYxMTU0NjJmNmJmMTIwOTRjNDIxYiIsImlhdCI6MTc1ODg2MTMzOCwiZXhwIjoxNzU4ODY0OTM4fQ.LZ9GeOZM5enhnOcX9krh8NqrbjHiYMuHfChZefxb-so",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ids\": [\r\n    \"68d617228b4c0209daff39ac\",\r\n    \"68d6179b8b4c0209daff39b2\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseURL}}/inventory/bulk-delete"
+			},
+			"response": []
+		},
+		{
+			"name": "One car",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDYxMTU0NjJmNmJmMTIwOTRjNDIxYiIsImlhdCI6MTc1ODg1OTk5OSwiZXhwIjoxNzU4ODYzNTk5fQ.N87QTfUYnbIu0p7YFTSgh67c1j9FrN5h_Ojm-pxS_lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{baseURL}}/inventory/68d617aa8b4c0209daff39b4"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		}
+	]
+}
